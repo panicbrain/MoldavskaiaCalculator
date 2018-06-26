@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class IsPositiveTest extends TestBase {
-    @Test(dataProvider = "valuesForIsPositiveTest", groups = {"Arithmetic"})
+    @Test(dataProvider = "valuesForIsPositiveTest")
     public void isPositiveTest(long a, boolean expectedResult) {
         boolean result = calculator.isPositive(a);
         assertEquals(result, expectedResult, "Invalid result of sign verification");

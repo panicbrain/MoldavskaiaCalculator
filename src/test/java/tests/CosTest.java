@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 
 public class CosTest extends TestBase {
-    @Test(dataProvider = "valuesForCosTest")
+    @Test(dataProvider = "valuesForCosTest", groups = {"Trigonometric"})
     public void CosTest(double a, double expectedResult) {
         double result = calculator.cos(a);
         assertTrue((expectedResult - result) < 0.0001, "Invalid result of cos function");

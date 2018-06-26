@@ -8,14 +8,14 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CtgTest extends TestBase {
-    @Test(dataProvider = "valuesForCtgTest", groups = {"Double"})
+    @Test(dataProvider = "valuesForCtgTest", groups = {"Trigonometric"})
     public void ctgTest(double a, double expectedResult) {
         double result = calculator.ctg(a);
         assertTrue((expectedResult - result) < 0.0001, "Invalid result of ctg function");
         //assertEquals(result, expectedResult, "Invalid result of ctg function");
     }
 
-    @Test (groups = {"Double"})
+    @Test (groups = {"Trigonometric"})
     public void ctgOfZeroTest() {
         assertEquals(calculator.ctg(0), POSITIVE_INFINITY, "Invalid cth function of zero");
     }

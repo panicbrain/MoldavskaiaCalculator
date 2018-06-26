@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class SummaryDoubleTest extends TestBase {
-    @Test(dataProvider = "valuesForSummaryTest", groups = {"Double", "Arithmetic"})
+    @Test(dataProvider = "valuesForSummaryTest")
     public void summaryDoubleTest(double a, double b, double expectedResult) {
         double result = calculator.sum(a, b);
         assertEquals(result, expectedResult, "Invalid result of double summary");

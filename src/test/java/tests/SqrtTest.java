@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class SqrtTest extends TestBase {
-    @Test(dataProvider = "valuesForSqrtTest", groups = {"Double", "Arithmetic"})
+    @Test(dataProvider = "valuesForSqrtTest")
     public void sqrtTest(double a, double expectedResult){
         double result = calculator.sqrt(a);
         assertEquals(result, expectedResult, "Invalid result of sqrt action");

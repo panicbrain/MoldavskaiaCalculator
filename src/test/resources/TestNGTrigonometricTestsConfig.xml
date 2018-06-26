@@ -5,7 +5,7 @@
 
         <groups>
             <run>
-                <exclude name="Trigonometric"/>
+                <include name="Trigonometric"/>
             </run>
         </groups>
 

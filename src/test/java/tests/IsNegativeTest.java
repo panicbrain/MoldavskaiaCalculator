@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class IsNegativeTest extends TestBase {
-    @Test(dataProvider = "valuesForIsNegativeTest", groups = {"Arithmetic"})
+    @Test(dataProvider = "valuesForIsNegativeTest")
     public void isNegativeTest(long a, boolean expectedResult) {
         boolean result = calculator.isNegative(a);
         assertEquals(result, expectedResult, "Invalid result of sign verification");

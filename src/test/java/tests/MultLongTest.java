@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class MultLongTest extends TestBase {
-    @Test(dataProvider = "valuesForMultiplicationTest", groups = {"Long", "Arithmetic"})
+    @Test(dataProvider = "valuesForMultiplicationTest")
     public void multiplicationLongTest(long a, long b, long expectedResult){
         long result = calculator.mult(a, b);
         assertEquals(result, expectedResult, "Invalid result of long multiplication");

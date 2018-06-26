@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class SummaryLongTest extends TestBase {
-    @Test(dataProvider = "valuesForSummaryTest", groups = {"Long", "Arithmetic"})
+    @Test(dataProvider = "valuesForSummaryTest")
     public void summaryLongTest(long a, long b, long expectedResult){
         long result = calculator.sum(a, b);
         assertEquals(result, expectedResult, "Invalid result of long summary");

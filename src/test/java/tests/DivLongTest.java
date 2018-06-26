@@ -7,23 +7,23 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertThrows;
 
 public class DivLongTest extends TestBase {
-    @Test(dataProvider = "valuesForDivisionTest", groups = {"Long", "Arithmetic"})
+    @Test(dataProvider = "valuesForDivisionTest")
     public void divisionLongTest(long a, long b, long expectedResult) {
         long result = calculator.div(a, b);
         assertEquals(result, expectedResult, "Invalid result of long division");
     }
-    @Test (groups = {"Long", "Arithmetic"})
+    @Test
     public void divisionDifferentTypeMethodTest(){
         assertEquals((double)calculator.div(5,2), calculator.div(5d,2d));
     }
 
-    @Test (groups = {"Long", "Arithmetic"})
+    @Test
     public void divisionNotCompletelyTest(){
         assertEquals((double)calculator.div(5,2), 2.5);
     }
 
 
-    @Test(expectedExceptions = NumberFormatException.class, groups = {"Long", "Arithmetic"})
+    @Test(expectedExceptions = NumberFormatException.class)
     public void divisionByZeroTest(){
         long result = calculator.div(5, 0);
     }

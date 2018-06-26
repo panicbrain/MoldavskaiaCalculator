@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class SubtractionLongTest extends TestBase {
-    @Test(dataProvider = "valuesForSubtractionTest", groups = {"Long", "Arithmetic"})
+    @Test(dataProvider = "valuesForSubtractionTest")
     public void subtractionLongTest(long a, long b, long expectedResult){
         long result = calculator.sub(a, b);
         assertEquals(result, expectedResult, "Invalid result of long subtraction");

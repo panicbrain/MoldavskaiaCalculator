@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class MultDoubleTest extends TestBase {
-    @Test(dataProvider = "valuesForMultiplicationTest", groups = {"Double", "Arithmetic"})
+    @Test(dataProvider = "valuesForMultiplicationTest")
     public void multiplicationDoubleTest(double a, double b, double expectedResult) {
         double result = calculator.mult(a, b);
         Assert.assertEquals(result, expectedResult, "Invalid result of double multiplication");

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class PowTest extends TestBase {
-    @Test(dataProvider = "valuesForPowTest", groups = {"Double", "Arithmetic"})
+    @Test(dataProvider = "valuesForPowTest")
     public void powTest(double a, double b, double expectedResult){
         double result = calculator.pow(a, b);
         assertEquals(result, expectedResult, "Invalid result of pow action");

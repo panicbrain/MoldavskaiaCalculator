@@ -6,11 +6,12 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class SubtractionDoubleTest extends TestBase{
-    @Test(dataProvider = "valuesForSubtractionTest", groups = {"Double", "Arithmetic"})
+    @Test(dataProvider = "valuesForSubtractionTest")
     public void subtractionDoubleTest(double a, double b, double expectedResult){
         double result = calculator.sub(a, b);
-        assertEquals(result, expectedResult, "Invalid result of double subtraction");
-    }
+        int resultOfCompareResults = Double.compare(result, expectedResult);
+        assertTrue(resultOfCompareResults == 0, "Invalid result of double subtraction");
+     }
 
     @DataProvider(name = "valuesForSubtractionTest")
     public Object[][] valueforSubtraction() {
