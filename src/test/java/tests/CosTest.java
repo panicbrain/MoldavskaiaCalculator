@@ -9,7 +9,8 @@ public class CosTest extends TestBase {
     @Test(dataProvider = "valuesForCosTest", groups = {"Trigonometric"})
     public void CosTest(double a, double expectedResult) {
         double result = calculator.cos(a);
-        assertTrue((expectedResult - result) < 0.0001, "Invalid result of cos function");
+        int resultOfCompareResults = Double.compare(result, expectedResult);
+        assertTrue(resultOfCompareResults == 0, "Invalid result of cos function");
     }
 
     @DataProvider(name = "valuesForCosTest")

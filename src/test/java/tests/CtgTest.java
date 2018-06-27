@@ -11,9 +11,9 @@ public class CtgTest extends TestBase {
     @Test(dataProvider = "valuesForCtgTest", groups = {"Trigonometric"})
     public void ctgTest(double a, double expectedResult) {
         double result = calculator.ctg(a);
-        assertTrue((expectedResult - result) < 0.0001, "Invalid result of ctg function");
-        //assertEquals(result, expectedResult, "Invalid result of ctg function");
-    }
+        int resultOfCompareResults = Double.compare(result, expectedResult);
+        assertTrue(resultOfCompareResults == 0, "Invalid result of ctg function");
+      }
 
     @Test (groups = {"Trigonometric"})
     public void ctgOfZeroTest() {
