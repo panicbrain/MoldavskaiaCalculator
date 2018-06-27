@@ -6,8 +6,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
+
     Calculator calculator;
-    @BeforeClass
+
+    @BeforeClass(alwaysRun = true)
     public void beforeClass(){
         calculator = new Calculator();
     }

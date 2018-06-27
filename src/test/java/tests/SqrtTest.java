@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import static java.lang.Double.NaN;
 import static org.testng.Assert.assertEquals;
 
 public class SqrtTest extends TestBase {
@@ -12,9 +13,11 @@ public class SqrtTest extends TestBase {
         assertEquals(result, expectedResult, "Invalid result of sqrt action");
     }
 
-    @Test(expectedExceptions = Exception.class)
-    public void sqrtOfNegativeNumberTest(){
+    @Test(groups = {"IncorrectActionCheck"})
+    public void sqrtOfNegativeNumberTest() {
         double result = calculator.sqrt(-25);
+
+        assertEquals(result, NaN, "Invalid result of sqrt action");
     }
 
     @DataProvider(name = "valuesForSqrtTest")

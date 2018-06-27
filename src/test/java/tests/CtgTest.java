@@ -8,16 +8,16 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CtgTest extends TestBase {
-    @Test(dataProvider = "valuesForCtgTest", groups = {"Trigonometric"})
+    @Test(dataProvider = "valuesForCtgTest")
     public void ctgTest(double a, double expectedResult) {
         double result = calculator.ctg(a);
         int resultOfCompareResults = Double.compare(result, expectedResult);
         assertTrue(resultOfCompareResults == 0, "Invalid result of ctg function");
       }
 
-    @Test (groups = {"Trigonometric"})
+    @Test (groups = {"IncorrectActionCheck"})
     public void ctgOfZeroTest() {
-        assertEquals(calculator.ctg(0), POSITIVE_INFINITY, "Invalid cth function of zero");
+        assertEquals(calculator.ctg(0), POSITIVE_INFINITY, "Invalid ctg function of zero");
     }
 
     //http://old.exponenta.ru/educat/class/test/hyperb/13.asp - table for tanh

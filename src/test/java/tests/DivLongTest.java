@@ -23,7 +23,7 @@ public class DivLongTest extends TestBase {
     }
 
 
-    @Test(expectedExceptions = NumberFormatException.class)
+    @Test(expectedExceptions = NumberFormatException.class, groups = {"IncorrectActionCheck"})
     public void divisionByZeroTest(){
         long result = calculator.div(5, 0);
     }

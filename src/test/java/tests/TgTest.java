@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class TgTest extends TestBase {
-    @Test(dataProvider = "valuesForTgTest", groups = {"Trigonometric"})
+    @Test(dataProvider = "valuesForTgTest")
     public void tgTest(double a, double expectedResult){
         double result = calculator.tg(a);
         assertEquals(result, expectedResult, "Invalid result of tg function");

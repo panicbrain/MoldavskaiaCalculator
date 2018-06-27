@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SinusTest extends TestBase {
-    @Test(dataProvider = "valuesForSinTest", groups = {"Trigonometric"})
+    @Test(dataProvider = "valuesForSinTest")
     public void SinTest(double a, double expectedResult) {
         double result = calculator.sin(a);
         assertTrue((expectedResult - result) < 0.0001, "Invalid result of sin function");

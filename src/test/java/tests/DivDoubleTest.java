@@ -18,8 +18,8 @@ public class DivDoubleTest extends TestBase {
     }
 
 
-    @Test(expectedExceptions = NumberFormatException.class)
-    public void divisionByZeroTest(){
+    @Test(expectedExceptions = Exception.class, groups = {"IncorrectActionCheck"})
+    public void divisionByZeroTest() throws Exception{
         double result = calculator.div(5d, 0d);
     }
 
